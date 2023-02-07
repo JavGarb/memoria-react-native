@@ -38,7 +38,7 @@ export default function App() {
     setScore(score +1);
   };
 
-  const didPleyerWin = () => matchedCards.length === board.length;
+  const didPlayerWin = () => matchedCards.length === board.length;
 
   const resetGame= () => {
     desordenar([...tarjetas, ...tarjetas]);
@@ -49,7 +49,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{didPleyerWin()? "Ganaste!!":"Memoria"}</Text>
+      <Text style={styles.title}>{didPlayerWin()? "Ganaste!!":"Memoria"}</Text>
       <Text style={styles.title}>Puntos: {score}</Text>
 
       <View style={styles.board}>
